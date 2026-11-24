@@ -9,27 +9,28 @@ body {
     background: linear-gradient(120deg, #0f172a, #2563eb);
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: clamp(4rem, 12vw, 7.5rem) 1rem;
 }
 
-    .hero h1 {
-        font-size: 48px;
-        font-weight: bold;
-    }
+.hero .container {
+    max-width: 48rem;
+}
 
-    .hero p {
-        font-size: 18px;
-        margin: 20px 0;
-    }
+.hero h1 {
+    font-size: clamp(2.25rem, 6vw, 3rem);
+    font-weight: bold;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    margin: 1.25rem 0;
+}
 
 .section {
-    padding: 70px 20px;
+    padding: clamp(3rem, 8vw, 4.375rem) 1rem;
 }
-
-    .section h2 {
-        font-weight: bold;
-        margin-bottom: 25px;
-    }
 
 .services {
     background: #f1f5f9;
@@ -37,26 +38,36 @@ body {
 
 .service-card {
     background: white;
-    padding: 35px;
+    padding: clamp(1.25rem, 4vw, 2.2rem);
     border-radius: 12px;
     height: 100%;
     box-shadow: 0 4px 15px #00000010;
 }
 
-    .service-card h3 {
-        color: #2563eb;
-        font-size: 22px;
-    }
+.service-card h3 {
+    color: #2563eb;
+    font-size: clamp(1.25rem, 3vw, 1.375rem);
+}
 
 .footer {
     background: #0f172a;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 1.25rem 1rem;
 }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 32px;
+@media (max-width: 575.98px) {
+    .hero .btn {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #contact p {
+        overflow-wrap: anywhere;
     }
 }
